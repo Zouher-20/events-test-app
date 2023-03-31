@@ -8,7 +8,7 @@ export const useThemeStore = defineStore("theme", {
   actions: {
     detectTheme() {
       var theme = localStorage.getItem("theme");
-      if ("theme") return theme;
+      if (theme) return theme;
       else {
         if (
           window.matchMedia &&

@@ -9,13 +9,20 @@
     "test:unit": "vitest"
   },
   "dependencies": {
+    "@jamescoyle/vue-icon": "^0.1.2",
+    "@mdi/js": "^7.2.96",
+    "@mdi/light-js": "^0.2.63",
+    "@vuepic/vue-datepicker": "^4.2.3",
     "daisyui": "^2.51.5",
+    "dayjs": "^1.11.7",
     "pinia": "^2.0.32",
     "vue": "^3.2.47",
     "vue-i18n": "9",
+    "vue-mdijs": "^0.5.12",
     "vue-router": "^4.1.6"
   },
   "devDependencies": {
+    "@iconify/vue": "^4.1.0",
     "@vitejs/plugin-vue": "^4.0.0",
     "@vue/test-utils": "^2.3.0",
     "autoprefixer": "^10.4.13",

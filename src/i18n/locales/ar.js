@@ -1,3 +1,3 @@
 export default {
-  viewStore: "مرحبا",
+  viewStore: "عرض المتجر",
 };

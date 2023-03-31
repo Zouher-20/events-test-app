@@ -1,3 +1,3 @@
 export default {
-  viewStore: "helloWorld",
+  viewStore: "view store",
 };
