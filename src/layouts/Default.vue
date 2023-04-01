@@ -34,7 +34,7 @@ const hideSidebar = () => {
         </label>
 
         <div class="flex gap-4 items-center">
-          <RouterLink target="_blank" :to="{ name: 'view-store' }">
+          <RouterLink :to="{ name: 'view-store' }">
             <button class="btn btn-primary">
               <Icon
                 icon="ic:baseline-local-grocery-store"
@@ -62,7 +62,7 @@ const hideSidebar = () => {
         for="my-drawer"
         class="drawer-overlay"
       ></label>
-      <Sidebar />
+      <Sidebar @navigated="$refs.sidebarToggle.click()" />
     </div>
   </div>
 </template>

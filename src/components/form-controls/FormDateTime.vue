@@ -23,7 +23,7 @@ const date = computed({
 <template>
   <div>
     <label class="label">
-      <span class="label-text">{{ label }}</span>
+      <span class="label-text capitalize">{{ label }}</span>
     </label>
     <VueDatePicker
       v-bind="inputAttrs"

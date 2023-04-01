@@ -2,7 +2,9 @@
 import { storeToRefs } from "pinia";
 import { useToastStore } from "@/stores/toast";
 import { Icon } from "@iconify/vue";
+import { useI18n } from "vue-i18n";
 const store = useToastStore();
+const { t } = useI18n();
 const { isToastShown, toastText } = storeToRefs(store);
 </script>
 
@@ -11,7 +13,7 @@ const { isToastShown, toastText } = storeToRefs(store);
     <div
       v-if="isToastShown"
       id="toast-component"
-      class="fixed left-5 top-24 max-w-xs z-50 bg-base-200 px-5 py-4 border-l-8 rounded-lg border-primary bg-dark2 shadow-lg"
+      class="fixed rtl:right-5 ltr:left-5 top-24 max-w-xs z-50 bg-base-200 px-5 py-4 border-l-8 rounded-lg border-success bg-dark2 shadow-lg"
     >
       <p class="text-sm flex items-center gap-3">
         <Icon
@@ -23,7 +25,7 @@ const { isToastShown, toastText } = storeToRefs(store);
           class="text-xs py-1 px-3 link link-hover link-info"
           @click="store.hideToast()"
         >
-          dismiss
+          {{ t("dismiss") }}
         </a>
       </p>
     </div>

@@ -3,7 +3,16 @@
 @tailwind utilities;
 
 
-:root {}
+
+:lang(ar-SA) * {
+  font-family: 'Tajawal', sans-serif;
+}
+
+:lang(en) * {
+  font-family: 'Montserrat', sans-serif;
+
+}
+
 
 *,
 *::before,

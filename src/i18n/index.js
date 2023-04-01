@@ -4,7 +4,7 @@ import en from "./locales/en";
 
 const i18n = createI18n({
   legacy: false,
-  locale: "en-US",
+  locale: "en",
   fallbackLocale: "en",
   availableLocales: ["en", "ar"],
   inheritLocale: true,

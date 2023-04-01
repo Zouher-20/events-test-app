@@ -15,7 +15,7 @@ defineProps({
     <div class="flex-grow flex flex-col ml-4">
       <span class="text-xl text-success font-bold">{{ card.value }}</span>
       <div class="flex items-center justify-between">
-        <span class="text-gray-500">{{ card.title }}</span>
+        <span class="text-gray-500 capitalize">{{ card.title }}</span>
       </div>
     </div>
   </div>

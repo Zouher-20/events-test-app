@@ -17,7 +17,7 @@ const value = computed({
 <template>
   <div class="form-control">
     <label class="label">
-      <span class="label-text">{{ label }}</span>
+      <span class="label-text capitalize">{{ label }}</span>
     </label>
     <textarea
       v-model="value"

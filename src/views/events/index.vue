@@ -4,6 +4,7 @@ import { useEventsStore } from "@/stores/events";
 import FormInput from "../../components/form-controls/FormInput.vue";
 import { ref, watch } from "vue";
 import { useI18n } from "vue-i18n";
+import { Icon } from "@iconify/vue";
 
 const { t } = useI18n();
 const store = useEventsStore();
@@ -14,6 +15,8 @@ var filteredEvents = [...store.events];
 watch(search, (val) => {
   filteredEvents = store.events.filter((e) => e.title.includes(val));
 });
+
+// TODO: tickets management functionality
 </script>
 
 <template>
@@ -27,7 +30,7 @@ watch(search, (val) => {
 
     <RouterLink :to="{ name: 'new-event' }">
       <button
-        class="btn btn-success fixed bottom-5 flex space-x-1 text-base-100 items-center right-5"
+        class="btn btn-success fixed bottom-5 flex gap-1 text-base-100 items-center right-5"
       >
         <Icon icon="mdi-plus" class="text-lg" />
         <div>

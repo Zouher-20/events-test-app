@@ -1,6 +1,6 @@
-# TODOer
+# Events up
 
-TODO List App Test
+Eventscube App mini Clone
 
 ## Project Setup
 

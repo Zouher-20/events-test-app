@@ -1,20 +1,27 @@
 <script setup>
-import { useLangStore } from "@/stores/language";
 import { Icon } from "@iconify/vue";
-import { ref } from "vue";
+import { useI18n } from "vue-i18n";
+const { locale } = useI18n();
 
-const store = useLangStore();
-const onLanguageChange = () => {};
-const menuOpen = ref(false);
+const onLanguageChange = () => {
+  if (locale.value === "en") localStorage.setItem("lang", "ar");
+  else localStorage.setItem("lang", "en");
+  window.location.reload();
+};
 </script>
 
 <template>
-  <div dir="rtl" class="flex cursor-pointer hover:opacity-70 items-center">
+  <div
+    @click="onLanguageChange"
+    :dir="locale === 'en' ? 'rtl' : 'ltr'"
+    class="flex cursor-pointer hover:opacity-70 items-center"
+  >
     <Icon
-      @click="menuOpen = !menuOpen"
-      icon="flag:sa-4x3"
-      class="text-lg mr-2"
+      :icon="locale === 'en' ? 'flag:sa-4x3' : 'flagpack:gb-ukm'"
+      class="text-lg"
     />
-    <div>العربيّة</div>
+    <div class="mx-2 font-bold">
+      {{ locale === "en" ? "العربيّة" : "English" }}
+    </div>
   </div>
 </template>
